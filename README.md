@@ -1,23 +1,26 @@
 # MachineLearning-ImageClassifier
 An image classifier project using machine learning implemented via the pytorch python library. 
+This project is a standalone python application to train and predict images. It is implemented using the pytorch, and it uses pre-trained neuronal networks models (form ImageNet) and a classifier of your choice. The pre-trained model is used to detect the image features, which are then fed to a classifer to predict an image. The user can choose either densenet161 or vgg16 as pre-trained model, and can assign it a classifier with arbitrarly number of hidden layers to appropriatly classify the user's images set. 
+The project was applied on 102 species of flowers. As the picture below shows, very good results were achieved.
+![Sample images](./figures/result.png)
 
 # Flower-Image-Classifier-Pytorch
 
-This code is my submission for Udacity's AI Programming with Python Nanodegree. In this project, I created a command line application utilizing Pytorch, Neural Networks and Transfer Learning to train a new classifier on top of a pre-existing model trained on ImageNet to identify between 102 different types of flowers.
+This code was developped as part of the Udacity's data scientist Nanodegree. In this project, I created a command line application utilizing Pytorch, Neural Networks and Transfer Learning to train a new classifier on top of a pre-existing model trained on ImageNet to identify between 102 different types of flowers.
 
 _This program can be modified to train itself on many different image classification problems if the proper arguments are passed.
 Please read the comment comments to get information on arguments and how to use the programs._
 
 ## Example Commands
 ```
-python train.py --arch densenet --hidden_units 1000,500 --epochs 10 --learning_rate 0.001 --gpu true --data_dir flowers/ --save_dir checkpoint.pth
+python train.py flowers --save_dir checkpoints --arch densenet161 --hidden_units 1024,512 --learning_rate 0.001 --dropout_probability 0.5 --epochs 10 --logger file --gpu 
 ```
 ```
-python predict.py --checkpoint checkpoint.pth --input flowers/test/32/image_051001.jpg --top_k 5 --category_names cat_to_name.json --gpu true
+python predict.py flowers/test/10/image_07090.jpg checkpoints/checkpointNLLLossAdam10 --top_k 5 --category_names cat_to_name.json --logger file --gpu
 ```
 
 ## Training
-To train a model, run `train.py` with the desired model architecture (densenet or vgg) and the path to the image folder:
+To train a model, run `train.py` with the desired model architecture (densenet161 or vgg16) and the path to the image folder:
 
 ```
 python train.py --arch densenet --data_dir flowers [image folder with train, val and test sub-folders]
