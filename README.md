@@ -7,7 +7,7 @@ The project was applied on 102 species of flowers. As the picture below shows, v
 ![Example result](./figures/prediction_result_image.png)
 
 ## Usage
-To use this project, all what you need to do is to split your imageset into three parts, training, validation, and testing similar to the attached flowers dataset, i.e., flowers->(train,valid,test)->classes(1,2,3,4,5)->images. Then, you can create, train, tune, and save your model in one shot using `train.py`. Afterwards, you can load the model anytime and predict new images using `predict.py` once you have create a file that maps your numerical classes to descriptive categories (see cat_to_name.json).
+To use this project, all what you need to do is to split your imageset into three parts, training, validation, and testing similar to the attached flowers dataset, i.e., flowers->(train,valid,test)->classes(1,2,3,4,5)->images. Then, you can create, train, tune, and save your model in one shot using `train.py`. Afterwards, you can load the model anytime and predict new images using `predict.py`, once you have created a file that maps your numerical classes to descriptive categories (see cat_to_name.json).
 
 ## Train
 
