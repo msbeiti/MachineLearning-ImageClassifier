@@ -15,10 +15,10 @@ To use this project, all what you need to do is to split your imageset into thre
 ```
 python train.py flowers --save_dir checkpoints --arch densenet161 --hidden_units 1024,512 --learning_rate 0.001 --dropout_probability 0.5 --epochs 10 --logger file --gpu 
 ```
-![Example output](./figures/predict_output.png)
+![Example output](./figures/train_output.png)
 
 #### Train options
-The command above will use default values for all other values than the imageset folder. See below for how to customize these values.
+The command above will use default values for all other values than the data_directory(images folder path). See below what options are available.
 
 ![Train options](./figures/train_options.png)
 
@@ -30,6 +30,6 @@ python predict.py flowers/test/10/image_07090.jpg checkpoints/checkpointNLLLossA
 ![Example output](./figures/predict_output.png)
 
 #### Predict options
-The command above will use default values for all other values than the imageset folder. See below for how to customize these values.
+The command above will use default values for all other values than the image_file (the image to predict) and model_file (the saved model to use for prediction). See below for how to customize these values.
 
 ![Predict options](./figures/predict_options.png)
