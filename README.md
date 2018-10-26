@@ -7,7 +7,7 @@ The project was applied on 102 species of flowers. As the picture below shows, v
 ![Example result](./figures/prediction_result_image.png)
 
 ## Usage
-To use this project, all what you need to do is to split your imageset into three parts, training, validation, and testing similar to the attached flowers dataset, i.e., flowers->(train,valid,test)->classes(1,2,3,4,5)->images. Then, you can create, train, tune, and save your model in one shot using `train.py`. Afterwards, you can load the model anytime and predict new images using `predict.py`.
+To use this project, all what you need to do is to split your imageset into three parts, training, validation, and testing similar to the attached flowers dataset, i.e., flowers->(train,valid,test)->classes(1,2,3,4,5)->images. Then, you can create, train, tune, and save your model in one shot using `train.py`. Afterwards, you can load the model anytime and predict new images using `predict.py` once you have create a file that maps your numerical classes to descriptive categories (see cat_to_name.json).
 
 ## Train
 
@@ -18,7 +18,7 @@ python train.py flowers --save_dir checkpoints --arch densenet161 --hidden_units
 ![Example output](./figures/train_output.png)
 
 #### Train options
-The command above will use default values for all other values than the data_directory(images folder path). See below what options are available.
+The command above will use default values for all other values than the data_directory (images folder path). See below for available options.
 
 ![Train options](./figures/train_options.png)
 
@@ -33,3 +33,6 @@ python predict.py flowers/test/10/image_07090.jpg checkpoints/checkpointNLLLossA
 The command above will use default values for all other values than the image_file (the image to predict) and model_file (the saved model to use for prediction). See below for how to customize these values.
 
 ![Predict options](./figures/predict_options.png)
+
+
+*This code was developped as part of the Udacity data scientist nanodegree.*
