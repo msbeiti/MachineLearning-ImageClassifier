@@ -23,7 +23,7 @@ The command above will use default values for all other values than the data_dir
 ![Train options](./figures/train_options.png)
 
 ## Predict
-## Example Command
+#### Example Command
 ```
 python predict.py flowers/test/10/image_07090.jpg checkpoints/checkpointNLLLossAdam10 --top_k 5 --category_names cat_to_name.json --logger file --gpu
 ```
