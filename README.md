@@ -1,6 +1,7 @@
 # MachineLearning-ImageClassifier
-An image classifier project using machine learning implemented via the pytorch python library. 
-This project is a standalone python application to train and predict images. It is implemented using the pytorch, and it uses pre-trained neuronal networks models (form ImageNet) and a classifier of your choice. The pre-trained model is used to detect the image features, which are then fed to a classifer to predict an image. The user can choose either densenet161 or vgg16 as pre-trained model, and can assign it a classifier with arbitrarly number of hidden layers to appropriatly classify the user's images set. 
+This project is an image classifier project using machine learning implemented via the pytorch python library. 
+
+The project is a standalone python application to train and predict images. It is implemented using the pytorch, and it uses pre-trained neuronal networks models (form ImageNet) with a classifier of your choice. The pre-trained model is used to detect the image features, which are then fed to your classifer to predict an image. You can choose either densenet161 or vgg16 as pre-trained model, and can assign it a classifier with arbitrarly number of hidden layers to appropriatly classify your images set. 
 The project was applied on 102 species of flowers. As the picture below shows, very good results were achieved.
 ![Example result](./figures/prediction_result_image.png)
 
